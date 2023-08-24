@@ -81,11 +81,13 @@ GO"
 
 Invoke-Sqlcmd -query $compatibilityScript -ServerInstance $Server -database $Database -Username $User -Password $Pass
 Write-host "## Ran compatibility script against database"
+<#
 Invoke-Sqlcmd -inputFile script.sql -ServerInstance $Server -database $Database -Username $User -Password $Pass
 Write-host "## Ran migration against database"	
 
 Remove-Item -Path ../src/AdminSite/appsettings.Development.json
 Remove-Item -Path script.sql
+#>
 Write-host "#### Database Deployment complete ####"	
 
 
